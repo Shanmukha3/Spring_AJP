@@ -1,0 +1,21 @@
+<!-- applicationContext.xml -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define an Team bean -->
+    <bean id="team" class="com.example.iplXML.Team">
+        <property name="id" value="1"/>
+        <property name="teamName" value="Mumbai Indians"/> <!-- Updated teamName -->
+        <property name="playerName" value="Rohit Sharma"/>  <!-- Added playerName -->
+        <property name="captainName" value="Rohit Sharma"/> <!-- Updated captainName -->
+    </bean>
+
+    <!-- Define an TeamService bean -->
+    <bean id="teamService" class="com.example.iplXML.TeamService">
+        <property name="team" ref="team"/>
+    </bean>
+
+</beans>

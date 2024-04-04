@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- applicationContext.xml -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define a Student bean -->
+    <bean id="student" class="com.example.studentxml.Student">
+        <property name="id" value="4003"/>
+        <property name="name" value="Shannu"/>
+        <property name="section" value="A"/>
+    </bean>
+
+    <!-- Define a StudentService bean -->
+    <bean id="studentService" class="com.example.studentxml.StudentService">
+        <property name="student" ref="student"/>
+    </bean>
+
+</beans>
